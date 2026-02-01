@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Город Седона – каньоны Аризоны</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="/favicon.ico">
   </head>
 
   <body>
@@ -177,25 +178,29 @@
                 <p class="form-check-date">
                   <label class="modal-label-title" for="check-in-date">Дата заезда:</label>
                   <input class="input input-check-date" type="text" id="check-in-date" name="check-in-date"
-                    placeholder="Укажите дату" value="27 Апреля 2020" autofocus required>
-                  <span class="icon-calendar" tabindex="0"></span>
+                    placeholder="Укажите дату" value="27 апреля 2020" autofocus required>
+                  <span class="icon-calendar" tabindex="0" aria-label="Календарь даты заезда"></span>
+                  <span class="form-info form-info-warning">Мы не можем отправить вас в прошлое.</span>
                 </p>
-                <span class="form-info form-info-warning">Мы не можем отправить вас в прошлое.</span>
                 <p class="form-check-date">
                   <label class="modal-label-title" for="check-out-date">Дата выезда:</label>
                   <input class="input input-check-date" type="text" id="check-out-date" name="check-out-date"
-                    placeholder="Укажите дату" value="1 Сентября 2021" required>
-                  <span class="icon-calendar" tabindex="0"></span>
+                    placeholder="Укажите дату" value="1 сентября 2023" required>
+                  <span class="icon-calendar" tabindex="0" aria-label="Календарь даты выезда "></span>
+                  <span class="form-info">На эти даты есть свободные номера. Пока есть.</span>
                 </p>
-                <span class="form-info">На эти даты есть свободные номера. Пока есть.</span>
                 <div class="check-in-all-persons-wrapper">
                   <div class="check-in-persons-wrapper check-in-adults-wrapper">
                     <label class="modal-label-title" for="adults">Взрослые:</label>
                     <div class="buttons-wrap">
-                      <button class="button button-plus-minus button-minus" type="button"></button>
-                      <input class="input persons" type="text" id="adults" name="adults" value="2" placeholder="0"
+                      <button class="button button-plus-minus button-minus" type="button">
+                        <span class="visually-hidden">Увеличивает количество взрослых</span>
+                      </button>
+                      <input class="input input-persons" type="text" id="adults" name="adults" value="2" placeholder="0"
                         maxlength="2" required>
-                      <button class="button button-plus-minus button-plus" type="button"></button>
+                      <button class="button button-plus-minus button-plus" type="button">
+                        <span class="visually-hidden">Уменьшает количество взрослых</span>
+                      </button>
                     </div>
                   </div>
                   <div class="check-in-persons-wrapper check-in-children-wrapper">
@@ -206,10 +211,14 @@
                       от&nbsp;6&nbsp;до&nbsp;18&nbsp;лет. Дети до&nbsp;6&nbsp;лет размещаются бесплатно.
                     </span>
                     <div class="buttons-wrap">
-                      <button class="button button-plus-minus button-minus" type="button"></button>
-                      <input class="input persons" type="text" id="children" name="children" value="2" placeholder="0"
-                        maxlength="2">
-                      <button class="button button-plus-minus button-plus" type="button"></button>
+                      <button class="button button-plus-minus button-minus" type="button">
+                        <span class="visually-hidden">Увеличивает количество детей</span>
+                      </button>
+                      <input class="input input-persons" type="text" id="children" name="children" value="2"
+                        placeholder="0" maxlength="2">
+                      <button class="button button-plus-minus button-plus" type="button">
+                        <span class="visually-hidden">Уменьшает количество детей</span>
+                      </button>
                     </div>
                   </div>
                 </div>
